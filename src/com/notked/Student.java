@@ -74,6 +74,17 @@ public class Student {
 		return totalModules * 5;
 	}
 	
+	public boolean canProgress() {
+		// To find out if the student can progress, we must first find out their average grade for the year.
+		// We can do this by adding up the sum of the count, so the sum of the 3 numbers.
+		int averageGrade = 0;
+		
+		for(int i = 0; i < grades.length; i++) {
+			averageGrade += grades[i];
+		}
+		averageGrade = averageGrade / 3;
+		return false;
+	}
 	
 	public void print(String s) {
 		System.out.println(s);
