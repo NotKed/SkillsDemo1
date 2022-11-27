@@ -60,11 +60,20 @@ public class Student {
 		for(int i = 0; i < gradeStrings.length; i++) {
 			grades[i] = Integer.parseInt(gradeStrings[i]);
 		}
-		
-		for(int i = 0; i <grades.length; i++) {
-			System.out.println(grades[i]);
-		}
 	}
+	
+	
+	// We will use a custom method to calculate the credits the student has recieved throughout the course.
+	// As per the brief, the student should receive 5 credits per module completed, per semester.
+	public int calculateCredits() {
+		int totalModules = 0;
+		for(int i = 0; i < modules.length; i++) {
+			totalModules += modules[i];
+		}
+		// We add up the total modules they completed and multiply it by 5 to get the credits.
+		return totalModules * 5;
+	}
+	
 	
 	public void print(String s) {
 		System.out.println(s);
